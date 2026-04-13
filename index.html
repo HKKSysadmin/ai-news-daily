@@ -3,96 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>世界AIニュース速報 - Daily Global AI News</title>
+<title>世界AIニュース速報 - 日刊アーカイブ</title>
 <style>
-:root {
-  --primary: #1a1a2e;
-  --accent: #0f3460;
-  --highlight: #e94560;
-  --bg: #f0f2f5;
-  --card-bg: #ffffff;
-  --text: #2d3436;
-  --text-light: #636e72;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-}
-header {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 60%, #16213e 100%);
-  color: white;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-header p { opacity: 0.85; font-size: 1rem; max-width: 600px; margin: 0 auto; }
-.container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
-h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; }
-.latest-banner {
-  background: linear-gradient(135deg, #e94560, #0f3460);
-  color: white;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.latest-banner h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-.latest-banner a {
-  display: inline-block;
-  background: white;
-  color: var(--primary);
-  padding: 0.6rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 700;
-  margin-top: 0.5rem;
-  transition: transform 0.2s;
-}
-.latest-banner a:hover { transform: scale(1.05); }
-.archive-list { list-style: none; }
-.archive-list li {
-  background: var(--card-bg);
-  border-radius: 8px;
-  margin-bottom: 0.6rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-}
-.archive-list li a {
-  display: block;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  color: var(--text);
-  transition: background 0.2s;
-}
-.archive-list li a:hover { background: #f0f2f5; }
-.archive-list .date { font-weight: 700; color: var(--accent); }
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-light);
-  font-size: 0.8rem;
-}
+:root{--primary:#1a1a2e;--accent:#0f3460;--highlight:#e94560;--bg:#f4f6fb;--card:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Hiragino Sans','Yu Gothic',Meiryo,sans-serif;background:var(--bg);color:var(--primary);line-height:1.7;}
+header{background:linear-gradient(135deg,var(--primary),var(--accent));color:white;padding:60px 20px;text-align:center;}
+header h1{font-size:2.6rem;margin-bottom:12px;}
+header p{opacity:0.9;font-size:1.05rem;}
+main{max-width:900px;margin:0 auto;padding:40px 20px;}
+.latest{background:linear-gradient(135deg,#fff,#fff5f7);border:2px solid var(--highlight);border-radius:12px;padding:30px;margin-bottom:40px;box-shadow:0 4px 16px rgba(233,69,96,0.15);}
+.latest .label{display:inline-block;background:var(--highlight);color:white;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:bold;margin-bottom:12px;}
+.latest h2{color:var(--primary);margin-bottom:10px;}
+.latest a.btn{display:inline-block;background:var(--highlight);color:white;text-decoration:none;padding:12px 30px;border-radius:6px;font-weight:bold;margin-top:14px;transition:transform 0.15s;}
+.latest a.btn:hover{transform:translateY(-2px);}
+.archive h2{color:var(--primary);border-bottom:3px solid var(--highlight);padding-bottom:8px;margin-bottom:20px;font-size:1.5rem;}
+.archive ul{list-style:none;}
+.archive li{background:var(--card);border:1px solid #e1e5ec;border-radius:8px;padding:14px 18px;margin-bottom:10px;transition:transform 0.15s,box-shadow 0.15s;}
+.archive li:hover{transform:translateX(4px);box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+.archive a{color:var(--accent);text-decoration:none;font-weight:bold;font-size:1.02rem;}
+.archive a:hover{color:var(--highlight);}
+footer{background:var(--primary);color:white;text-align:center;padding:24px;margin-top:40px;font-size:0.9rem;opacity:0.92;}
 </style>
 </head>
 <body>
 <header>
-  <h1>世界AIニュース速報</h1>
-  <p>米国・カナダ・EU・オーストラリア・オーストリアなど世界各国の最新AIニュースを毎日収集し、AI分析付きで日本語でお届けします。</p>
+<h1>🌐 世界AIニュース速報</h1>
+<p>Global AI News Daily — 毎朝8時に6地域のAIニュースを自動収集・分析</p>
 </header>
-<div class="container">
-  <div class="latest-banner">
-    <h3>最新レポート</h3>
-    <a href="ai-news-2026-04-13.html">2026年4月13日のAIニュースを読む</a>
-  </div>
-  <h2>アーカイブ</h2>
-  <ul class="archive-list">
-    <li><a href="ai-news-2026-04-13.html"><span class="date">2026-04-13</span> ― Meta Muse Spark発表、GPT-5.4が業務精度で新記録、Physical AI企業導入率58%、EU AI法8月施行へ</a></li>
-  </ul>
+<main>
+<div class="latest">
+<span class="label">📍 最新レポート</span>
+<h2>2026年4月14日（火）版</h2>
+<p>米国・カナダ・EU・オーストラリア・オーストリア・日本のAIニュースと、トレンド／技術／ビジネス3軸のAI分析をお届けします。</p>
+<a class="btn" href="ai-news-2026-04-14.html">最新版を読む →</a>
 </div>
+<section class="archive">
+<h2>📚 アーカイブ</h2>
+<ul>
+<li><a href="ai-news-2026-04-14.html">📅 2026年4月14日（火）レポート</a></li>
+<li><a href="ai-news-2026-04-13.html">📅 2026年4月13日（月）レポート</a></li>
+</ul>
+</section>
+</main>
 <footer>
-  <p>本サイトはClaude（Anthropic）によって毎朝自動生成されています</p>
+<p>🤖 世界AIニュース速報 — 自動配信システム</p>
+<p style="margin-top:6px;opacity:0.75;font-size:0.85rem;">Powered by Claude & GitHub Pages</p>
 </footer>
 </body>
 </html>
