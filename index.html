@@ -3,52 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>世界AIニュース速報 - 日刊アーカイブ</title>
+<title>世界AIニュース速報 アーカイブ</title>
 <style>
-:root{--primary:#1a1a2e;--accent:#0f3460;--highlight:#e94560;--bg:#f4f6fb;--card:#fff;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Hiragino Sans','Yu Gothic',Meiryo,sans-serif;background:var(--bg);color:var(--primary);line-height:1.7;}
-header{background:linear-gradient(135deg,var(--primary),var(--accent));color:white;padding:60px 20px;text-align:center;}
-header h1{font-size:2.6rem;margin-bottom:12px;}
-header p{opacity:0.9;font-size:1.05rem;}
-main{max-width:900px;margin:0 auto;padding:40px 20px;}
-.latest{background:linear-gradient(135deg,#fff,#fff5f7);border:2px solid var(--highlight);border-radius:12px;padding:30px;margin-bottom:40px;box-shadow:0 4px 16px rgba(233,69,96,0.15);}
-.latest .label{display:inline-block;background:var(--highlight);color:white;padding:4px 14px;border-radius:20px;font-size:0.8rem;font-weight:bold;margin-bottom:12px;}
-.latest h2{color:var(--primary);margin-bottom:10px;}
-.latest a.btn{display:inline-block;background:var(--highlight);color:white;text-decoration:none;padding:12px 30px;border-radius:6px;font-weight:bold;margin-top:14px;transition:transform 0.15s;}
-.latest a.btn:hover{transform:translateY(-2px);}
-.archive h2{color:var(--primary);border-bottom:3px solid var(--highlight);padding-bottom:8px;margin-bottom:20px;font-size:1.5rem;}
-.archive ul{list-style:none;}
-.archive li{background:var(--card);border:1px solid #e1e5ec;border-radius:8px;padding:14px 18px;margin-bottom:10px;transition:transform 0.15s,box-shadow 0.15s;}
-.archive li:hover{transform:translateX(4px);box-shadow:0 2px 10px rgba(0,0,0,0.08);}
-.archive a{color:var(--accent);text-decoration:none;font-weight:bold;font-size:1.02rem;}
-.archive a:hover{color:var(--highlight);}
-footer{background:var(--primary);color:white;text-align:center;padding:24px;margin-top:40px;font-size:0.9rem;opacity:0.92;}
+:root{
+  --primary:#1a1a2e;
+  --accent:#0f3460;
+  --highlight:#e94560;
+  --bg:#f5f5f7;
+  --card:#ffffff;
+  --text:#2d2d3a;
+  --muted:#6b6b80;
+  --border:#e5e5ef;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;display:flex;flex-direction:column}
+header{background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);color:#fff;padding:60px 24px 70px;text-align:center;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(233,69,96,.2),transparent 50%)}
+header h1{font-size:2.4rem;letter-spacing:.04em;position:relative;z-index:1}
+header .subtitle{color:#c7c7d9;margin-top:10px;font-size:1.05rem;position:relative;z-index:1}
+main{max-width:900px;margin:0 auto;padding:40px 20px 60px;flex:1;width:100%}
+.latest-banner{background:linear-gradient(135deg,var(--highlight) 0%,#d13050 100%);color:#fff;border-radius:16px;padding:28px 30px;margin-bottom:40px;box-shadow:0 8px 24px rgba(233,69,96,.25);text-align:center}
+.latest-banner .label{font-size:.85rem;letter-spacing:.15em;opacity:.9;margin-bottom:6px}
+.latest-banner h2{font-size:1.4rem;margin-bottom:16px}
+.latest-banner a.btn{display:inline-block;background:#fff;color:var(--highlight);padding:12px 28px;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .15s}
+.latest-banner a.btn:hover{transform:translateY(-2px)}
+.section-title{font-size:1.35rem;margin:20px 0 18px;padding-left:12px;border-left:4px solid var(--highlight);color:var(--primary);font-weight:700}
+.archive{background:var(--card);border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.05);overflow:hidden}
+.archive-item{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);transition:background .15s}
+.archive-item:last-child{border-bottom:none}
+.archive-item:hover{background:var(--bg)}
+.archive-item .date{font-weight:600;color:var(--primary)}
+.archive-item .arrow{color:var(--accent);font-size:1.1rem}
+.about{background:var(--card);border-radius:14px;padding:24px 28px;margin-top:30px;box-shadow:0 4px 18px rgba(0,0,0,.05);font-size:.95rem;color:var(--muted)}
+.about strong{color:var(--primary)}
+footer{background:var(--primary);color:#c7c7d9;text-align:center;padding:24px 20px;font-size:.88rem}
+footer a{color:#fff;text-decoration:none}
+@media(max-width:640px){
+  header h1{font-size:1.7rem}
+  .latest-banner h2{font-size:1.15rem}
+}
 </style>
 </head>
 <body>
 <header>
-<h1>🌐 世界AIニュース速報</h1>
-<p>Global AI News Daily — 毎朝8時に6地域のAIニュースを自動収集・分析</p>
+  <h1>世界AIニュース速報</h1>
+  <p class="subtitle">Global AI News Digest — 自動生成アーカイブ</p>
 </header>
+
 <main>
-<div class="latest">
-<span class="label">📍 最新レポート</span>
-<h2>2026年4月14日（火）版</h2>
-<p>米国・カナダ・EU・オーストラリア・オーストリア・日本のAIニュースと、トレンド／技術／ビジネス3軸のAI分析をお届けします。</p>
-<a class="btn" href="ai-news-2026-04-14.html">最新版を読む →</a>
+
+<div class="latest-banner">
+  <div class="label">LATEST REPORT</div>
+  <h2>2026年4月15日（水） 最新レポート</h2>
+  <a class="btn" href="ai-news-2026-04-15.html">📰 最新レポートを読む</a>
 </div>
-<section class="archive">
-<h2>📚 アーカイブ</h2>
-<ul>
-<li><a href="ai-news-2026-04-14.html">📅 2026年4月14日（火）レポート</a></li>
-<li><a href="ai-news-2026-04-13.html">📅 2026年4月13日（月）レポート</a></li>
-</ul>
-</section>
+
+<h2 class="section-title">過去のレポート</h2>
+<div class="archive">
+  <a class="archive-item" href="ai-news-2026-04-15.html">
+    <span class="date">2026年4月15日（水）</span><span class="arrow">→</span>
+  </a>
+  <a class="archive-item" href="ai-news-2026-04-14.html">
+    <span class="date">2026年4月14日（火）</span><span class="arrow">→</span>
+  </a>
+  <a class="archive-item" href="ai-news-2026-04-13.html">
+    <span class="date">2026年4月13日（月）</span><span class="arrow">→</span>
+  </a>
+</div>
+
+<div class="about">
+  <p><strong>📡 このサイトについて：</strong> 世界6地域（米国・カナダ・EU・オーストラリア・オーストリア・日本）のAIニュースを毎朝8時に自動収集し、日本語AI分析を付したレポートを公開しています。モデル動向、企業動向、規制、ロボティクス、地域別ハイライトをカバー。</p>
+</div>
+
 </main>
+
 <footer>
-<p>🤖 世界AIニュース速報 — 自動配信システム</p>
-<p style="margin-top:6px;opacity:0.75;font-size:0.85rem;">Powered by Claude & GitHub Pages</p>
+  <p>世界AIニュース速報 — 自動収集・AI分析レポート</p>
+  <p style="margin-top:6px;font-size:.82rem;opacity:.7">Last updated: 2026-04-15</p>
 </footer>
+
 </body>
 </html>
