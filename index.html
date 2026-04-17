@@ -3,153 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>世界AIニュース速報 - Global AI News Digest</title>
+<title>世界AIニュース速報 — 日次アーカイブ</title>
 <style>
   :root {
     --primary: #1a1a2e;
     --accent: #0f3460;
     --highlight: #e94560;
-    --bg: #f0f2f5;
-    --card-bg: #ffffff;
-    --text: #2d3436;
-    --text-light: #636e72;
-    --border: #dfe6e9;
+    --soft: #f5f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --text: #1f2937;
+    --border: #e5e7eb;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
-    background: var(--bg);
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    background: var(--soft);
     color: var(--text);
     line-height: 1.7;
   }
-  header {
-    background: linear-gradient(135deg, var(--primary), #16a085);
+  header.top {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
     color: #fff;
-    padding: 60px 20px 50px;
+    padding: 64px 24px 56px;
     text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   }
-  header h1 { font-size: 2.4rem; margin-bottom: 10px; }
-  header p { opacity: 0.92; font-size: 1.05rem; max-width: 680px; margin: 0 auto; }
-  main { max-width: 860px; margin: 32px auto; padding: 0 20px 40px; }
-  .latest-banner {
-    background: linear-gradient(135deg, var(--highlight), #ff7675);
-    color: #fff;
-    border-radius: 14px;
-    padding: 28px 26px;
-    margin-bottom: 28px;
-    box-shadow: 0 6px 18px rgba(233, 69, 96, 0.28);
+  header.top h1 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 4.2vw, 40px);
+    letter-spacing: 0.03em;
   }
-  .latest-banner h2 { font-size: 1.3rem; margin-bottom: 10px; }
-  .latest-banner p { opacity: 0.95; margin-bottom: 16px; }
-  .latest-banner a {
+  header.top p {
+    margin: 8px 0 0;
+    opacity: 0.9;
+    font-size: 15px;
+  }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+  .latest {
+    background: linear-gradient(135deg, #fff 0%, #fef2f4 100%);
+    border-radius: 16px;
+    padding: 28px 30px;
+    border: 2px solid var(--highlight);
+    box-shadow: 0 6px 24px rgba(233, 69, 96, 0.12);
+    margin-bottom: 36px;
+  }
+  .latest .badge {
     display: inline-block;
-    background: #fff;
-    color: var(--highlight);
-    padding: 10px 24px;
-    border-radius: 30px;
-    text-decoration: none;
+    background: var(--highlight);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
     font-weight: 700;
-    transition: transform 0.15s;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
   }
-  .latest-banner a:hover { transform: translateY(-2px); }
-  .archive {
-    background: var(--card-bg);
-    border-radius: 14px;
-    padding: 26px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  .latest h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: var(--primary);
   }
-  .archive h2 { font-size: 1.25rem; color: var(--primary); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
-  .archive ul { list-style: none; }
-  .archive li {
-    border-bottom: 1px dashed var(--border);
-  }
-  .archive li:last-child { border-bottom: none; }
-  .archive a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 4px;
+  .latest a.cta {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--primary);
+    color: #fff;
     text-decoration: none;
-    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     transition: background 0.2s;
   }
-  .archive a:hover { background: var(--bg); padding-left: 12px; padding-right: 12px; border-radius: 6px; }
-  .archive .date-badge {
-    background: var(--accent);
-    color: #fff;
-    font-size: 0.85rem;
-    padding: 4px 12px;
-    border-radius: 14px;
-    margin-right: 14px;
+  .latest a.cta:hover { background: var(--accent); }
+  h3.archive-title {
+    font-size: 18px;
+    color: var(--primary);
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--highlight);
+    margin-bottom: 18px;
   }
-  .archive .arrow { color: var(--highlight); font-weight: 700; }
-  .about {
-    background: var(--card-bg);
-    border-radius: 14px;
-    padding: 22px 26px;
-    margin-top: 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  ul.archive {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
-  .about h2 { font-size: 1.15rem; color: var(--primary); margin-bottom: 10px; }
-  .about p { color: var(--text-light); font-size: 0.95rem; }
-  footer { text-align: center; padding: 24px; color: var(--text-light); font-size: 0.85rem; background: #fff; border-top: 1px solid var(--border); }
-  @media (max-width: 640px) {
-    header h1 { font-size: 1.8rem; }
-    main { padding: 0 14px 30px; }
+  ul.archive li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  ul.archive li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(15,52,96,0.08);
+  }
+  ul.archive a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  ul.archive a:hover { text-decoration: underline; }
+  ul.archive .date {
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer {
+    background: var(--primary);
+    color: #cbd5e1;
+    padding: 28px 20px;
+    text-align: center;
+    font-size: 13px;
   }
 </style>
 </head>
 <body>
-<header>
+<header class="top">
   <h1>世界AIニュース速報</h1>
-  <p>米国・カナダ・EU・オーストラリア・オーストリア・日本の最新AIニュースを毎日自動収集し、日本語のAI分析付きでお届けします。</p>
+  <p>米国・カナダ・EU・オーストラリア・オーストリア・日本の最新AI動向を、毎朝8時にお届け</p>
 </header>
+
 <main>
-
-  <div class="latest-banner">
-    <h2>📰 最新レポート：2026年4月17日（金）</h2>
-    <p>本日の世界6地域のAI動向・技術・ビジネス視点の分析をまとめました。GPT-5.4、Gemini 3.1 Ultra、日本国立情報学研究所の12兆トークンLLM、TSMC Q1最高益など。</p>
-    <a href="ai-news-2026-04-17.html">最新レポートを読む →</a>
+  <div class="latest">
+    <span class="badge">最新レポート</span>
+    <h2>2026年4月18日（土）版</h2>
+    <p>NVIDIA Rubinの発表、EU AI Actトリローグ、日本AI基盤モデル開発の設立、カナダの主権AIコンピュート、オーストラリアのプライバシー法改正など、世界6地域の最新動向を網羅。</p>
+    <a class="cta" href="ai-news-2026-04-18.html">本日のレポートを読む →</a>
   </div>
 
-  <div class="archive">
-    <h2>🗂️ 過去のレポート</h2>
-    <ul>
-      <li>
-        <a href="ai-news-2026-04-17.html">
-          <span><span class="date-badge">2026-04-17</span>4月17日（金）世界AIニュース速報</span>
-          <span class="arrow">›</span>
-        </a>
-      </li>
-      <li>
-        <a href="ai-news-2026-04-15.html">
-          <span><span class="date-badge">2026-04-15</span>4月15日（水）世界AIニュース速報</span>
-          <span class="arrow">›</span>
-        </a>
-      </li>
-      <li>
-        <a href="ai-news-2026-04-14.html">
-          <span><span class="date-badge">2026-04-14</span>4月14日（火）世界AIニュース速報</span>
-          <span class="arrow">›</span>
-        </a>
-      </li>
-      <li>
-        <a href="ai-news-2026-04-13.html">
-          <span><span class="date-badge">2026-04-13</span>4月13日（月）世界AIニュース速報</span>
-          <span class="arrow">›</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="about">
-    <h2>ℹ️ このサイトについて</h2>
-    <p>世界6地域のAI関連ニュースを自動収集・AI分析したレポートです。毎朝8時（日本時間）に更新されます。各レポートにはトレンド分析、技術深掘り、投資・ビジネス視点の3セクションと、モデル・企業・規制・ロボティクス・地域別の5つのニュース区分が含まれます。</p>
-  </div>
-
+  <h3 class="archive-title">過去のレポート</h3>
+  <ul class="archive">
+    <li>
+      <a href="ai-news-2026-04-18.html">2026年4月18日版：Rubin発表／EU AI Actトリローグ／日本AI基盤モデル開発</a>
+      <span class="date">2026-04-18（土）</span>
+    </li>
+    <li>
+      <a href="ai-news-2026-04-17.html">2026年4月17日版</a>
+      <span class="date">2026-04-17（金）</span>
+    </li>
+    <li>
+      <a href="ai-news-2026-04-15.html">2026年4月15日版</a>
+      <span class="date">2026-04-15（水）</span>
+    </li>
+    <li>
+      <a href="ai-news-2026-04-14.html">2026年4月14日版</a>
+      <span class="date">2026-04-14（火）</span>
+    </li>
+    <li>
+      <a href="ai-news-2026-04-13.html">2026年4月13日版</a>
+      <span class="date">2026-04-13（月）</span>
+    </li>
+  </ul>
 </main>
+
 <footer>
-  <p>© 2026 世界AIニュース速報 / Powered by Claude</p>
+  <div>世界AIニュース速報 — 毎朝8時（JST）自動配信</div>
+  <div style="margin-top:8px;">本サイトは公開ニュースソースから自動生成されたAIキュレーションです。</div>
 </footer>
+
 </body>
 </html>
