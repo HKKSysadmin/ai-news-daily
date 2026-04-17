@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界AIニュース速報 — 2026年4月18日</title>
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #0f3460;
+    --highlight: #e94560;
+    --soft: #f5f7fb;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --text: #1f2937;
+    --border: #e5e7eb;
+    --trend: #2563eb;
+    --tech: #7c3aed;
+    --biz: #059669;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    background: var(--soft);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header.top {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: #fff;
+    padding: 56px 24px 48px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  }
+  header.top h1 {
+    margin: 0 0 12px;
+    font-size: clamp(24px, 4vw, 38px);
+    letter-spacing: 0.03em;
+  }
+  .date-badge {
+    display: inline-block;
+    background: var(--highlight);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+  .subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+    opacity: 0.85;
+  }
+  nav.sticky {
+    position: sticky;
+    top: 0;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    padding: 10px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  nav.sticky ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  nav.sticky a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  nav.sticky a:hover {
+    background: rgba(233, 69, 96, 0.25);
+    color: #fff;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+  }
+  section.block {
+    margin-bottom: 40px;
+  }
+  section.block h2 {
+    font-size: 22px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--highlight);
+    color: var(--primary);
+  }
+  .analysis-box {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px 26px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(15,52,96,0.06);
+    border-left: 6px solid var(--trend);
+  }
+  .analysis-box.analysis-tech { border-left-color: var(--tech); }
+  .analysis-box.analysis-biz { border-left-color: var(--biz); }
+  .analysis-box h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: var(--accent);
+  }
+  .analysis-box .insight {
+    margin-bottom: 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--border);
+  }
+  .analysis-box .insight:last-child { margin-bottom: 0; }
+  .analysis-box .insight strong {
+    display: block;
+    color: var(--primary);
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+  .news-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 6px rgba(15,52,96,0.05);
+    border: 1px solid var(--border);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(15,52,96,0.1);
+  }
+  .news-card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: var(--primary);
+  }
+  .news-card p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #fff;
+  }
+  .tag-us { background: #2563eb; }
+  .tag-eu { background: #1e3a8a; }
+  .tag-ca { background: #dc2626; }
+  .tag-au { background: #0891b2; }
+  .tag-at { background: #c026d3; }
+  .tag-jp { background: #ea580c; }
+  .tag-global { background: #4b5563; }
+  .source-link {
+    color: var(--highlight);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .source-link:hover { text-decoration: underline; }
+  footer {
+    background: var(--primary);
+    color: #cbd5e1;
+    padding: 28px 20px;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer a { color: var(--highlight); text-decoration: none; }
+  @media (max-width: 640px) {
+    main { padding: 20px 14px 32px; }
+    .analysis-box, .news-card { padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>世界AIニュース速報</h1>
+  <div class="date-badge">2026年4月18日（土）</div>
+  <div class="subtitle">米国・カナダ・EU・オーストラリア・オーストリア・日本のAI動向を毎朝お届け</div>
+</header>
+
+<nav class="sticky">
+  <ul>
+    <li><a href="#analysis">AI分析</a></li>
+    <li><a href="#models">モデル動向</a></li>
+    <li><a href="#companies">企業動向</a></li>
+    <li><a href="#regulation">規制・政策</a></li>
+    <li><a href="#robotics">ロボティクス</a></li>
+    <li><a href="#regions">地域別</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section class="block" id="analysis">
+  <h2>本日のAI分析（AIによるキュレーション）</h2>
+
+  <div class="analysis-box analysis-trend">
+    <h3>① トレンド分析 &amp; 注目ポイント</h3>
+    <div class="insight">
+      <strong>主権AIコンピュートが世界標準へ</strong>
+      カナダは4月15日に「AI Sovereign Compute Infrastructure Program」を正式発足させ、欧州のAI:AT（オーストリア）や日本の「日本AI基盤モデル開発」と並び、自国GPU・自国LLMへの国家投資が潮流となりつつある。米中二極化への対抗として、各国が独自のフロンティアモデルとデータセンター網を確保する動きは今後1年でさらに加速する見通し。
+    </div>
+    <div class="insight">
+      <strong>エージェンティックAIのメインストリーム化</strong>
+      OpenAIがAgents SDKにサンドボックスと安全ハーネスを追加し、NVIDIAが「Open Agent Development Platform」を発表するなど、エージェント開発の基盤レイヤー競争が本格化。OutSystemsの調査では96%の企業が既にAIエージェントを何らかの形で利用しており、いよいよ「PoCから本番運用」のフェーズに入った。
+    </div>
+    <div class="insight">
+      <strong>米欧の規制ギャップが投資配分を左右</strong>
+      EUではAI法のDigital Omnibus交渉が4月28日のトリローグに向けて最終局面、一方で英スイス・EEAを除外した米国製プロダクトのローンチが続発。欧州の中堅企業が品質管理システム整備に €193K〜€330K の初期費用を要する現実は、域内スタートアップへの逆風として業界誌でも指摘されている。
+    </div>
+  </div>
+
+  <div class="analysis-box analysis-tech">
+    <h3>② 技術深掘り分析</h3>
+    <div class="insight">
+      <strong>Rubin世代の到来でAIインフラ総入れ替え</strong>
+      NVIDIAが4月11日に発表した「Rubin」プラットフォームはVera CPU／Rubin GPU／NVLink 6／ConnectX-9／BlueField-4／Spectrum-6の6チップ構成。下半期から量産出荷され、既存のBlackwell/Hopperベースのクラスターを置き換える「世代交代」が始まる。AnthropicがBroadcom＋Google TPUで3.5GW規模を確保したことも、NVIDIA一強への分散シグナルと読める。
+    </div>
+    <div class="insight">
+      <strong>ハイブリッド・ニューロシンボリックで100倍省エネ</strong>
+      4月のScienceDaily報道では、ニューラルネットと記号推論を組み合わせた新手法がAI消費電力を最大100分の1に抑えつつ精度を向上させた。学習コストと電力コストが巨大化する中、純粋スケールアップ一辺倒の潮流に対し「構造的イノベーション」が再評価されるターニングポイントになる可能性がある。
+    </div>
+    <div class="insight">
+      <strong>フロンティアモデル防衛のための「共同防御線」</strong>
+      OpenAI、Anthropic、GoogleがFrontier Model Forum経由で情報共有を始め、中国勢によるadversarial distillation（不正蒸留）の検知で協調。モデル重みを守るのではなく「出力分布の盗用」を防ぐ競争力維持策という、新しい知財ガバナンスの形として注目される。
+    </div>
+  </div>
+
+  <div class="analysis-box analysis-biz">
+    <h3>③ 投資・ビジネス視点の分析</h3>
+    <div class="insight">
+      <strong>半導体市場1.3兆ドルシナリオ</strong>
+      BofAが2026年の半導体売上予測を1.3兆ドルへ引き上げ（+3000億ドル）、NVIDIA・Broadcom・Marvell・AMDを主要ドライバーに挙げた。AIチップ・パッケージング（CoWoS）は新たなボトルネックとして浮上しており、TSMCの先端パッケージキャパシティ争奪が投資ストーリーの中心に移りつつある。
+    </div>
+    <div class="insight">
+      <strong>AI恩恵の上位20%集中</strong>
+      PwCの2026年スタディは「AI経済効果の75%を上位20%の企業が獲得」と指摘。生成AIは3年で人口浸透率53%に達し、米国消費者向けに年1720億ドルの価値を創出したが、果実の分配は急速に偏っている。中堅企業の「取り残されリスク」が経営アジェンダ化している。
+    </div>
+    <div class="insight">
+      <strong>日本はコンソーシアム戦略で勝負</strong>
+      ソフトバンク・NEC・ホンダ・ソニーの4社が「日本AI基盤モデル開発」を設立し、政府は5年で約1兆円の支援枠。1兆パラメータ級LLM開発と100人規模技術者集約は、単独競争では厳しい日本勢が「共同主権AI」で活路を探る典型例。東京科学大学のAISNeC設立もアカデミア側の受け皿として連動する。
+    </div>
+  </div>
+</section>
+
+<section class="block" id="models">
+  <h2>1. モデル・基盤技術の動向</h2>
+
+  <div class="news-card">
+    <h4>NVIDIA、次世代AIプラットフォーム「Rubin」発表</h4>
+    <p>4月11日、NVIDIAはRubinプラットフォームを発表。Vera CPU／Rubin GPU／NVLink 6／ConnectX-9／BlueField-4／Spectrum-6の6チップ構成で、既に量産段階。2026年下半期にパートナー経由で製品提供開始予定。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Kicks-Off-the-Next-Generation-of-AI-With-Rubin--Six-New-Chips-One-Incredible-AI-Supercomputer/default.aspx" target="_blank" rel="noopener">出典：NVIDIA Investor Relations</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>GPT-5.4／Gemini 3.1／Claude 4.6が揃い踏み</h4>
+    <p>OpenAIが3月にGPT-5.4を、Googleが2〜3月にGemini 3.1 ProとFlash-Liteを、AnthropicがClaude Sonnet 4.6・Opus 4.6を相次いでリリース。GPT-5.4はGDPvalで83%、Gemini 3.1 ProはGPQA Diamondで94.3%を記録。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">出典：LLM Stats</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>MITテクノロジーレビュー「AIの現状を示す12のチャート」</h4>
+    <p>スタンフォードAI Index 2026のハイライトとして、生成AIが3年で人口浸透率53%（PC・インターネットより速い普及）、米国消費者への年間価値1720億ドルを達成と報告。AI市場のマクロ指標が整理されている。</p>
+    <div class="news-meta">
+      <span class="tag tag-global">グローバル</span>
+      <a class="source-link" href="https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/" target="_blank" rel="noopener">出典：MIT Technology Review</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>ニューロシンボリック手法でAI消費電力を最大100倍削減</h4>
+    <p>ScienceDaily（4月5日）が報じた研究は、ニューラルネットと記号推論を組み合わせることで精度を向上させながら消費電力を最大100分の1に抑制。AIのエネルギー問題に対するブレイクスルー候補として注目される。</p>
+    <div class="news-meta">
+      <span class="tag tag-global">グローバル</span>
+      <a class="source-link" href="https://www.sciencedaily.com/releases/2026/04/260405003952.htm" target="_blank" rel="noopener">出典：ScienceDaily</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="companies">
+  <h2>2. 企業動向・エージェント競争</h2>
+
+  <div class="news-card">
+    <h4>OpenAI、Agents SDKにサンドボックス機能追加</h4>
+    <p>4月15日、OpenAIはAgents SDKのアップデートを発表。より安全で強力なエンタープライズ向けエージェント開発を可能にするハーネスとサンドボックスをPythonで先行提供し、TypeScript対応も予定。標準API料金で全顧客に提供。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://techcrunch.com/2026/04/15/openai-updates-its-agents-sdk-to-help-enterprises-build-safer-more-capable-agents/" target="_blank" rel="noopener">出典：TechCrunch</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>BroadcomとAnthropicが大型契約、3.5GWの計算資源</h4>
+    <p>4月6日発表の契約拡大により、AnthropicはGoogleのTPUを活用した約3.5GW規模の計算能力を確保。NVIDIA一強への依存低減と、モデル学習インフラの多様化を象徴する動きとして市場で高評価。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html" target="_blank" rel="noopener">出典：CNBC</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>OpenAI・Anthropic・Googleが共同で「モデル盗用」対抗</h4>
+    <p>競合3社がFrontier Model Forumを通じて連携し、中国勢による敵対的蒸留（adversarial distillation）の検知と情報共有を開始。規約違反の不正抽出を識別するための業界横断イニシアチブ。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank" rel="noopener">出典：Bloomberg</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>BofA、2026年の半導体売上予測を1.3兆ドルに上方修正</h4>
+    <p>Bank of Americaが半導体市場予測を4カ月前比+3000億ドル、1.3兆ドルへ引き上げ。NVIDIA・Broadcom・Marvell・AMDを主要ドライバーに指定。AI需要の継続を背景にバリューチェーン全体の見通しが強気化。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://finance.yahoo.com/news/bofa-hikes-2026-chips-forecast-to-13-trillion-names-nvidia-broadcom-marvell-amd-as-top-drivers-164800203.html" target="_blank" rel="noopener">出典：Yahoo Finance</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>Equinixが「Fabric Intelligence」でAIネットワークをオーケストレーション</h4>
+    <p>4月15日、Equinixはエンタープライズ向けAIネットワーキング管理レイヤー「Fabric Intelligence」を発表。分散拠点間のAI推論・学習トラフィックの最適化を自動化する。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://newsroom.equinix.com/2026-04-15-Equinix-Accelerates-Enterprise-AI-Workloads-with-Launch-of-Fabric-Intelligence" target="_blank" rel="noopener">出典：Equinix Newsroom</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>PwC調査：AI経済効果の75%を上位20%企業が独占</h4>
+    <p>PwCの2026年AIパフォーマンス調査によれば、AIの経済的恩恵はリーディング企業層に集中。AI先行企業は生産性向上ではなく「成長」にフォーカスしている点も特徴。中堅以下の取り残しが構造化するリスクを示唆。</p>
+    <div class="news-meta">
+      <span class="tag tag-global">グローバル</span>
+      <a class="source-link" href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" target="_blank" rel="noopener">出典：PwC</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="regulation">
+  <h2>3. 規制・政策</h2>
+
+  <div class="news-card">
+    <h4>EU AI Act「Digital Omnibus」：4月28日にトリローグ政治合意の目標</h4>
+    <p>欧州議会と理事会がAI Actの簡素化交渉（Digital Omnibus）を継続中、4月28日の政治合意を目指す。8月2026年の大型施行期限に向けた最終調整で、透明性要件や生体認証規制の範囲が焦点。</p>
+    <div class="news-meta">
+      <span class="tag tag-eu">EU</span>
+      <a class="source-link" href="https://artificialintelligenceact.eu/" target="_blank" rel="noopener">出典：artificialintelligenceact.eu</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>人権団体40組織、AI Act弱体化への警鐘</h4>
+    <p>4月15日、ARTICLE 19ら40の人権・デジタル権利団体が欧州議会に書簡を送付。AI OmnibusがAI Actの透明性要件を後退させ、バイオメトリクス等高リスクAIから市民を守れなくなると警告。</p>
+    <div class="news-meta">
+      <span class="tag tag-eu">EU</span>
+      <a class="source-link" href="https://www.article19.org/resources/eu-safeguard-the-ai-act/" target="_blank" rel="noopener">出典：ARTICLE 19</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>Googleの「Personal Intelligence」EEA・英・スイス除外でローンチ</h4>
+    <p>4月14日のグローバル展開で、Googleはプライバシー関連規制を理由にEEA・英国・スイスを対象外に設定。欧州域内ユーザーへの新機能提供遅延が常態化しており、規制コストの可視化事例に。</p>
+    <div class="news-meta">
+      <span class="tag tag-eu">EU</span>
+      <a class="source-link" href="https://dataconomy.com/2026/04/15/eu-ai-act-is-strangling-european-innovation/" target="_blank" rel="noopener">出典：Dataconomy</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>オーストラリア政府、AI法制化を見送り「既存法枠組みで対応」</h4>
+    <p>4月1日、豪政府は上院AI特別委員会への回答を発表。高リスクAIへの拘束的ガードレール新設ではなく、既存の個人情報保護法・消費者法・オンライン安全法などで対応する方針。AI Safety Instituteは早期2026から約A$29.9Mで稼働。</p>
+    <div class="news-meta">
+      <span class="tag tag-au">豪州</span>
+      <a class="source-link" href="https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report" target="_blank" rel="noopener">出典：Department of Industry, Science and Resources</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>カナダ、AI Sovereign Compute Infrastructure Programを発足</h4>
+    <p>4月15日、カナダ政府はカナダ国内の大規模AIコンピュート基盤を構築する国家プログラムを正式発表。予算2024・2025の投資を統合し、国内研究・イノベーションのための主権的計算資源確保が目的。</p>
+    <div class="news-meta">
+      <span class="tag tag-ca">カナダ</span>
+      <a class="source-link" href="https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html" target="_blank" rel="noopener">出典：Canada.ca</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="robotics">
+  <h2>4. ロボティクス・物理AI</h2>
+
+  <div class="news-card">
+    <h4>Tesla Optimus Gen3：50アクチュエータ新ハンド・$20B CapEx</h4>
+    <p>テスラはフリーモントのModel S/X生産ラインをOptimus製造に転用、2026年に$200億の設備投資を計画。Giga TexasのCortex 2.0スーパーコンピュータは4月時点で250MW稼働、年央までに500MW到達見込み。ただしMusk氏自身はOptimusを「主に学習用途」と位置付け。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://humanoid.guide/product/optimus/" target="_blank" rel="noopener">出典：Humanoid.guide</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>Agility RoboticsのDigit、唯一の商用収益ヒューマノイド</h4>
+    <p>4月時点でAgilityのDigitがGXO倉庫で10万個超のトート搬送を達成、Toyota・Mercado Libreとの有償契約を締結。「生産性のある商業運用」を収益化している唯一のヒューマノイドとして業界内でポジションを確立。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://vfuturemedia.com/future-tech/humanoid-robots-enter-the-workforce-figure-boston-dynamics-and-tesla-optimus-2026/" target="_blank" rel="noopener">出典：VFuture Media</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>Cadence × NVIDIA、シミュレーションとIsaac/Cosmosの統合で「Sim-to-Real」克服</h4>
+    <p>Cadence Design SystemsとNVIDIAはパートナーシップを拡張。Cadenceのシミュレーションエンジンに、NVIDIAのIsaacロボティクスライブラリとCosmosワールドモデルを統合し、シミュレーションから実機への移行ギャップを縮小。</p>
+    <div class="news-meta">
+      <span class="tag tag-us">米国</span>
+      <a class="source-link" href="https://blogs.nvidia.com/blog/national-robotics-week-2026/" target="_blank" rel="noopener">出典：NVIDIA Blog</a>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="regions">
+  <h2>5. 地域別トピック</h2>
+
+  <div class="news-card">
+    <h4>【日本】ソフトバンク・NEC・ホンダ・ソニー、「日本AI基盤モデル開発」設立</h4>
+    <p>4社が十数%ずつ出資する主要株主として新会社を発足、約100人規模のAI技術者を集約。政府は2026年度から5年で約1兆円規模の支援枠を設定し、1兆パラメータ級のLLM開発を後押しする。</p>
+    <div class="news-meta">
+      <span class="tag tag-jp">日本</span>
+      <a class="source-link" href="https://news.yahoo.co.jp/articles/fc2f439eb46a32d79fe31499ef5945288fcc48b8" target="_blank" rel="noopener">出典：Yahoo!ニュース</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【日本】東京科学大学「AI-Science Nexusセンター（AISNeC）」設立</h4>
+    <p>4月1日、東京科学大学はAIと科学研究を融合する新センターAISNeCを設立。国立情報学研究所のLLM-jp-4（8B・32Bのフルスクラッチ国産LLM、オープンソース）と合わせ、アカデミアの基盤整備が加速。</p>
+    <div class="news-meta">
+      <span class="tag tag-jp">日本</span>
+      <a class="source-link" href="https://www.isct.ac.jp/ja/news/1exwhjh80qrp" target="_blank" rel="noopener">出典：東京科学大学</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【日本】AI・人工知能EXPO［春］第10回開催、「AIエージェント」本格フェーズ</h4>
+    <p>4月15日より東京ビッグサイトで開幕。国内最大規模のAI専門展示会として、従来のPoCデモではなく「実務を動かすAIエージェント」実装をテーマに、業種別ソリューションが多数出展された。</p>
+    <div class="news-meta">
+      <span class="tag tag-jp">日本</span>
+      <a class="source-link" href="https://bizfreak.co.jp/blog/s3apu6xiytr" target="_blank" rel="noopener">出典：bizfreak</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【カナダ】連邦政府がCohereと契約、1万1500名に展開</h4>
+    <p>Shared Services Canadaは2025年11月から1年間のCohereソフトウェアライセンスを$339,000で契約。既に20省庁の11,500人が利用中で、今四半期中に公務員全体に拡大予定。Solomon大臣も「Cohereのような国内企業優先」を明言。</p>
+    <div class="news-meta">
+      <span class="tag tag-ca">カナダ</span>
+      <a class="source-link" href="https://thelogic.co/news/cohere-federal-government-contract-canchat-ai/" target="_blank" rel="noopener">出典：The Logic</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【豪州】Privacy Act改正：12月10日からAI自動判断の説明義務</h4>
+    <p>2026年12月10日施行の個人情報保護法改正で、規制対象組織は自動化された意思決定に関する情報（対象となる判断の種類、使用される個人情報の種類）をプライバシーポリシーに明記する義務を負う。AI説明可能性の実務的トリガー。</p>
+    <div class="news-meta">
+      <span class="tag tag-au">豪州</span>
+      <a class="source-link" href="https://www.validata.ai/post/australia-s-ai-regulation-landscape-in-2026-what-every-business-needs-to-know" target="_blank" rel="noopener">出典：ValiDATA</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【オーストリア】Flinn.ai・Nyra Healthが注目スタートアップに</h4>
+    <p>EU-MedTech規制AIのFlinn.aiが約€31M、音声活用の神経リハビリNyra Healthが約€33.5Mを調達。Linz拠点のEmmi AIは工学シミュレーション高速化で€15M、GrazのTACEOはプライバシー保護ML基盤を展開。オーストリア資金調達全体は24→25年で約70%減の中、深層技術への選別投資が顕著。</p>
+    <div class="news-meta">
+      <span class="tag tag-at">オーストリア</span>
+      <a class="source-link" href="https://www.eu-startups.com/2026/01/10-austrian-startups-to-keep-an-eye-on-in-2026-and-beyond/" target="_blank" rel="noopener">出典：EU-Startups</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【オーストリア】AI Factory Austria（AI:AT）コワーキングHub稼働</h4>
+    <p>革新大臣Hanke氏が開所したAI Factory Austriaは、オーストリア企業のHPCアクセス、デジタル主権、戦略から実装への橋渡しを目指す。新設のコワーキングHubはAI実装のトレーニング拠点として機能する。</p>
+    <div class="news-meta">
+      <span class="tag tag-at">オーストリア</span>
+      <a class="source-link" href="https://www.bmimi.gv.at/en/service/press/releases/2026/0225-ai-factory.html" target="_blank" rel="noopener">出典：BMIMI</a>
+    </div>
+  </div>
+
+  <div class="news-card">
+    <h4>【EU】欧州のNVIDIA対抗勢力、最低$100Mの資金調達を模索</h4>
+    <p>欧州勢AIチップメーカーがCNBCに対し、NVIDIAに挑むには最低1億ドルの新規投資が必要と表明。2026年は欧州AIチップセクターが急伸する局面で、域内投資家の姿勢が試されている。</p>
+    <div class="news-meta">
+      <span class="tag tag-eu">EU</span>
+      <a class="source-link" href="https://www.businessstory.org/2026/04/17/nvidia-competitor-informs-cnbc-that-it-is-looking-for-a-minimum-of-100-million-in-investment-as-the-european-ai-chip-sector-surges/" target="_blank" rel="noopener">出典：BusinessStory</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>世界AIニュース速報 — 毎朝8時（JST）自動配信</div>
+  <div style="margin-top:8px;">2026年4月18日版 ／ 本レポートは公開ニュースソースから自動生成されたAIキュレーションです。内容の正確性については各出典リンクをご確認ください。</div>
+</footer>
+
+</body>
+</html>
