@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界AIニュース速報 - 2026年4月17日</title>
+<style>
+  :root {
+    --primary: #1a1a2e;
+    --accent: #0f3460;
+    --highlight: #e94560;
+    --bg: #f0f2f5;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --text-light: #636e72;
+    --border: #dfe6e9;
+    --analysis-bg: #fef9ef;
+    --analysis-border: #f0c040;
+    --tech-bg: #eef6ff;
+    --tech-border: #4a90d9;
+    --biz-bg: #efffef;
+    --biz-border: #27ae60;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+  header p.subtitle {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 18px;
+  }
+  .date-badge {
+    display: inline-block;
+    background: var(--highlight);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+  nav.sticky {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 10px 0;
+    z-index: 50;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav.sticky ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 18px;
+    padding: 0 20px;
+  }
+  nav.sticky a {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.2s;
+  }
+  nav.sticky a:hover { background: var(--bg); }
+  main {
+    max-width: 980px;
+    margin: 30px auto;
+    padding: 0 20px 40px;
+  }
+  .analysis {
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+    border-left: 5px solid;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .analysis h2 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: var(--primary);
+  }
+  .analysis ul { padding-left: 1.2em; }
+  .analysis li { margin-bottom: 10px; }
+  .analysis-trend { background: var(--analysis-bg); border-color: var(--analysis-border); }
+  .analysis-tech  { background: var(--tech-bg);     border-color: var(--tech-border); }
+  .analysis-biz   { background: var(--biz-bg);      border-color: var(--biz-border); }
+  section.news {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  section.news h2 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  article.news-item {
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  article.news-item:last-child { border-bottom: none; }
+  article.news-item h3 {
+    font-size: 1.06rem;
+    margin-bottom: 6px;
+    color: var(--accent);
+  }
+  article.news-item p {
+    color: var(--text);
+    font-size: 0.97rem;
+    margin-bottom: 8px;
+  }
+  article.news-item .src {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  article.news-item .src a {
+    color: var(--highlight);
+    text-decoration: none;
+  }
+  article.news-item .src a:hover { text-decoration: underline; }
+  .tag {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-right: 8px;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+  }
+  .tag-us     { background: #2d6cdf; }
+  .tag-eu     { background: #0984e3; }
+  .tag-ca     { background: #d63031; }
+  .tag-au     { background: #00b894; }
+  .tag-at     { background: #6c5ce7; }
+  .tag-jp     { background: #e17055; }
+  .tag-global { background: #636e72; }
+  footer {
+    text-align: center;
+    padding: 24px 20px;
+    color: var(--text-light);
+    font-size: 0.88rem;
+    background: #fff;
+    border-top: 1px solid var(--border);
+  }
+  @media (max-width: 640px) {
+    header h1 { font-size: 1.6rem; }
+    main { padding: 0 14px 30px; }
+    .analysis, section.news { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>世界AIニュース速報</h1>
+  <p class="subtitle">米国・カナダ・EU・オーストラリア・オーストリア・日本の最新AI動向とインサイト</p>
+  <span class="date-badge">2026年4月17日（金）</span>
+</header>
+
+<nav class="sticky">
+  <ul>
+    <li><a href="#analysis-trend">トレンド分析</a></li>
+    <li><a href="#analysis-tech">技術深掘り</a></li>
+    <li><a href="#analysis-biz">投資・ビジネス</a></li>
+    <li><a href="#news-models">モデル</a></li>
+    <li><a href="#news-enterprise">企業動向</a></li>
+    <li><a href="#news-regulation">規制</a></li>
+    <li><a href="#news-robotics">ロボティクス</a></li>
+    <li><a href="#news-regional">地域別</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <div id="analysis-trend" class="analysis analysis-trend">
+    <h2>📈 トレンド分析 &amp; 注目ポイント</h2>
+    <ul>
+      <li><strong>米中「モデル保護」の連合形成：</strong>OpenAI、Anthropic、Googleが初めて本格的な情報共有体制を構築し、中国勢による蒸留（distillation）対策に連携。Anthropic単独で1,600万件の不正アクセスを確認したという事実は、最先端モデルの知的財産保護が新たな戦略課題になったことを示している。</li>
+      <li><strong>エンタープライズAIは「導入」から「定着」フェーズへ：</strong>97%の経営層がAIエージェントを導入済みと回答する一方、79%が導入課題を抱えるという二極化が鮮明に。AIの経済的価値の74%が上位20%の企業に集中しており、「導入できた企業」と「活用しきれない企業」の収益格差が拡大している。</li>
+      <li><strong>国家主権AIインフラの地政学化：</strong>カナダがAI主権コンピュート戦略に20億ドル、オーストラリアがAnthropicとMoUを締結、オーストリアはAI:ATのコワーキングハブを始動、日本はNIIが12兆トークン学習モデルを公開。各国が米中依存から脱却し、独自のAI基盤整備を加速する年となっている。</li>
+    </ul>
+  </div>
+
+  <div id="analysis-tech" class="analysis analysis-tech">
+    <h2>🔬 技術深掘り分析</h2>
+    <ul>
+      <li><strong>マルチモーダル・長文コンテキストが新標準に：</strong>Google Gemini 3.1 Ultraがテキスト・画像・音声・動画を単一モデルでネイティブ処理する200万トークン文脈を実現。従来の「トランスクリプション中継」が不要となり、推論効率・応答遅延の両面で産業応用の水準が一段引き上げられた。</li>
+      <li><strong>量子×AIの実装フェーズ到来：</strong>NVIDIAが量子プロセッサのキャリブレーションとエラー訂正に特化した初のオープンAIモデル「Ising」を発表。従来比で2.5倍高速・3倍高精度という数値は、量子コンピュータ実用化に向けたAIの補完的役割を鮮明にしている。</li>
+      <li><strong>メモリ効率化技術の標準化：</strong>Google ResearchがICLR 2026で発表した「TurboQuant」は、PolarQuantベクトル回転と量子化Johnson-Lindenstrauss圧縮を組み合わせKVキャッシュ負荷を大幅削減。長文推論のGPUコスト問題に対する現実解として注目を集めている。</li>
+    </ul>
+  </div>
+
+  <div id="analysis-biz" class="analysis analysis-biz">
+    <h2>💼 投資・ビジネス視点の分析</h2>
+    <ul>
+      <li><strong>半導体サプライチェーンは完全に売り手市場：</strong>TSMCは2026年Q1で利益58%増、年間売上見通しを30%超の成長に上方修正。NVIDIAはCoWoS先端パッケージング能力の大半を確保しており、AI需要はむしろ供給制約がボトルネックになっている。AIインフラ投資サイクルは当面継続すると見るべき。</li>
+      <li><strong>OpenAI IPOへの現実路線：</strong>OpenAIは年率換算で250億ドル突破、Anthropicも190億ドルに接近。OpenAIは2026年後半の株式公開を視野に入れており、企業AI市場の成熟を示す象徴的イベントとなる可能性が高い。Anthropicはその資本でGoogle TPU 3.5GW分を確保。</li>
+      <li><strong>ヒューマノイドロボの「収益化」が鍵：</strong>Agility Roboticsの「Digit」はGXOで10万トート以上を搬送、Toyota・Mercado Libreと有償契約を締結。稼働実績のある唯一の商用ヒューマノイドとして評価を高めている。Tesla Optimusは2026年に5万台、Unitreeは1-2万台を計画しており、2026年は「量産と収益化」を問われる年になる。</li>
+    </ul>
+  </div>
+
+  <section id="news-models" class="news">
+    <h2>🧠 AIモデル・技術リリース</h2>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>GPT-5.4 "Thinking"モデル、GDPValで83%を達成</h3>
+      <p>OpenAIの最新モデルが知的労働評価ベンチマーク「GDPval」で83%を獲得し、人間エキスパートと同等または上回るスコアを記録。コンピュータ操作ベンチマークOSWorld-Verified・WebArena Verifiedでも最高点を更新した。</p>
+      <p class="src">出典：<a href="https://blog.mean.ceo/new-ai-model-releases-news-april-2026/" target="_blank" rel="noopener">Mean Blog</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>Google Gemini 3.1 Ultra、2Mトークン・真のマルチモーダル</h3>
+      <p>Googleはテキスト・画像・音声・動画を単一モデルでネイティブ処理する2百万トークン文脈のGemini 3.1 Ultraを公開。GPQA Diamondでも94.3%とトップクラスの推論性能を示した。</p>
+      <p class="src">出典：<a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM Stats</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>Anthropic Claude Mythos 5、限定公開の10兆パラメータモデル</h3>
+      <p>Anthropicは10兆パラメータ級の内部モデル「Mythos 5」を発表するも、サイバーセキュリティリスクを理由にProject Glasswingパートナーのみへ限定提供。コーディング・防御能力に特化した設計とされる。</p>
+      <p class="src">出典：<a href="https://renovateqr.com/blog/ai-models-april-2026" target="_blank" rel="noopener">RenovateQR</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-global">グローバル</span>NVIDIA、量子コンピュータ向けオープンAI「Ising」を発表</h3>
+      <p>量子プロセッサのキャリブレーションとエラー訂正に特化した初のオープンモデル。従来比で最大2.5倍の高速化と3倍の精度向上を実現する、という。</p>
+      <p class="src">出典：<a href="https://nvidianews.nvidia.com/news/nvidia-launches-ising-the-worlds-first-open-ai-models-to-accelerate-the-path-to-useful-quantum-computers" target="_blank" rel="noopener">NVIDIA Newsroom</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-global">グローバル</span>Google ResearchがICLR 2026でTurboQuantを発表</h3>
+      <p>KVキャッシュのメモリ消費を大幅圧縮するアルゴリズム。PolarQuantベクトル回転と量子化Johnson-Lindenstrauss圧縮の2段階処理で、長文推論コストを抑える。</p>
+      <p class="src">出典：<a href="https://www.searchcans.com/blog/ai-model-releases-april-2026-v2/" target="_blank" rel="noopener">SearchCans</a></p>
+    </article>
+  </section>
+
+  <section id="news-enterprise" class="news">
+    <h2>🏢 企業・インフラ動向</h2>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>OpenAI、年率換算250億ドル到達・IPOを視野に</h3>
+      <p>OpenAIは企業向け売上が全体の40%超に達し、2026年末までにコンシューマと同水準に達する見込み。早ければ2026年後半の株式公開に向けた準備段階に入ったと報じられている。</p>
+      <p class="src">出典：<a href="https://openai.com/index/next-phase-of-enterprise-ai/" target="_blank" rel="noopener">OpenAI</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>Anthropic、Google TPUで3.5GWの計算能力を確保</h3>
+      <p>AnthropicはGoogleとの拡張契約により、AI処理プロセッサで約3.5ギガワット相当の計算能力を調達。年率換算売上190億ドルに迫る急成長を支える。</p>
+      <p class="src">出典：<a href="https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html" target="_blank" rel="noopener">CNBC</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-global">グローバル</span>OpenAI・Anthropic・Google、中国勢の蒸留対策で連携</h3>
+      <p>Frontier Model Forumを通じた情報共有で、敵対的蒸留によるモデル複製を防ぐ。Anthropic単独で中国3社からの1,600万件の不正な対話を確認したという。</p>
+      <p class="src">出典：<a href="https://www.bloomberg.com/news/articles/2026-04-06/openai-anthropic-google-unite-to-combat-model-copying-in-china" target="_blank" rel="noopener">Bloomberg</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-global">グローバル</span>TSMC Q1利益58%増、AI需要で年間見通し上方修正</h3>
+      <p>TSMCの第1四半期売上は1.134兆台湾ドル（約350億米ドル）。2026年通年の売上成長見通しを30%超へ引き上げた。先端パッケージングCoWoSはNVIDIAが大半を予約済み。</p>
+      <p class="src">出典：<a href="https://www.cnbc.com/2026/04/16/tsmc-q1-profit-58-percent-ai-chip-demand-record.html" target="_blank" rel="noopener">CNBC</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>PwC調査：AI経済価値の74%が上位20%企業に集中</h3>
+      <p>AIの財務的リターンは少数の先行企業に集中。97%が導入を進める一方、79%が導入課題に直面しており、成果のばらつきが鮮明となっている。</p>
+      <p class="src">出典：<a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-performance-study.html" target="_blank" rel="noopener">PwC</a></p>
+    </article>
+  </section>
+
+  <section id="news-regulation" class="news">
+    <h2>⚖️ 規制・ガバナンス</h2>
+
+    <article class="news-item">
+      <h3><span class="tag tag-eu">EU</span>EU AI Act、8月2日に本格全面適用へ</h3>
+      <p>2024年8月発効のAI法は2026年8月2日に全面適用を迎える。GPAIモデルの訓練データ情報開示、著作権オプトアウト順守、AI生成物ラベリングが義務化される。</p>
+      <p class="src">出典：<a href="https://artificialintelligenceact.eu/implementation-timeline/" target="_blank" rel="noopener">EU AI Act Info</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-eu">EU</span>「デジタル・オムニバス」簡素化案に市民団体が反発</h3>
+      <p>欧州委員会が昨年提示したAI法・GDPRの簡素化提案に対し、アムネスティ等が「大手テックへの個人データ開放に繋がる」と警告。規制緩和と権利保護のバランスが議論の焦点に。</p>
+      <p class="src">出典：<a href="https://www.amnesty.org/en/latest/news/2026/04/eu-simplification-laws/" target="_blank" rel="noopener">Amnesty International</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-au">豪州</span>オーストラリア政府、Anthropicと戦略的MoUを締結</h3>
+      <p>オーストラリア政府は4月1日、Anthropicと覚書を締結し国内AI能力構築を支援。Anthropicは年内にシドニーオフィスを開設予定。国家AI計画の一環として整備が進む。</p>
+      <p class="src">出典：<a href="https://www.industry.gov.au/news/australian-government-has-signed-memorandum-understanding-mou-global-ai-innovator-anthropic" target="_blank" rel="noopener">豪州産業省</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-au">豪州</span>新AI導入指針「GfAA」、6つの必須慣行に再編</h3>
+      <p>オーストラリアは従来の10ガードレールを6つの必須慣行へ集約した新ガイダンスを公開。AIシステムのライフサイクル全体に踏み込んだ、より規範的な運用を求める内容。</p>
+      <p class="src">出典：<a href="https://www.whitecase.com/insight-alert/australia-launches-new-ai-guidance" target="_blank" rel="noopener">White &amp; Case</a></p>
+    </article>
+  </section>
+
+  <section id="news-robotics" class="news">
+    <h2>🤖 ロボティクス・エージェント</h2>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>NVIDIA Isaac GR00Tオープンモデル、自然言語ロボを推進</h3>
+      <p>視覚言語行動推論により、自然言語の指示を解釈し複数ステップのタスクを遂行できるオープンモデル群を公開。ヒューマノイドや産業ロボ向けの標準基盤を狙う。</p>
+      <p class="src">出典：<a href="https://blogs.nvidia.com/blog/national-robotics-week-2026/" target="_blank" rel="noopener">NVIDIA Blog</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>Amazon、ヒューマノイド「Sprout」のFauna Roboticsを買収</h3>
+      <p>Amazonは4月、家庭用ヒューマノイド「Sprout」の開発元Fauna Roboticsを買収し、コンシューマ向けロボット領域を本格拡張する。</p>
+      <p class="src">出典：<a href="https://humanoid.press/" target="_blank" rel="noopener">Humanoid Press</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-us">米国</span>Agility Robotics「Digit」、商用ヒューマノイドで唯一の収益化</h3>
+      <p>DigitはGXO倉庫で10万トート以上を搬送し、Toyota・Mercado Libreと有償契約を締結。生産的な商用業務から継続的な売上を計上する唯一のヒューマノイドとして評価を確立。</p>
+      <p class="src">出典：<a href="https://newmarketpitch.com/blogs/news/humanoid-robotics-robot-comparison" target="_blank" rel="noopener">New Market Pitch</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-global">グローバル</span>Unitree・Tesla、ヒューマノイド量産体制へ</h3>
+      <p>Unitreeは2025年に5,500台以上を出荷、2026年は1-2万台を計画。Teslaは年5万台のOptimus（2-3万ドル）を目標とする。Boston DynamicsのAtlas商用化も2026-2028年を視野に。</p>
+      <p class="src">出典：<a href="https://humanoidroboticstechnology.com/articles/top-12-humanoid-robots-of-2026/" target="_blank" rel="noopener">Humanoid Robotics Technology</a></p>
+    </article>
+  </section>
+
+  <section id="news-regional" class="news">
+    <h2>🌏 地域別ハイライト</h2>
+
+    <article class="news-item">
+      <h3><span class="tag tag-ca">カナダ</span>AI主権コンピュート基盤整備へ、国家公募を開始</h3>
+      <p>カナダ政府は「AI Sovereign Compute Infrastructure Program」の応募受付を開始。2024・2025年度予算に基づき、大規模な国内AI計算基盤の構築を支援する。</p>
+      <p class="src">出典：<a href="https://www.canada.ca/en/innovation-science-economic-development/news/2026/04/canada-launches-national-initiative-to-build-large-scale-ai-supercomputing-capacity.html" target="_blank" rel="noopener">カナダ政府</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-ca">カナダ</span>Cohereがドイツ Aleph Alphaと合併交渉</h3>
+      <p>カナダ発の大規模言語モデル企業CohereがドイツのAleph Alphaとの合併を協議中。カナダ連邦政府へは交渉初期段階で通知済み。欧州・カナダのAI主権連携が新たな局面を迎える。</p>
+      <p class="src">出典：<a href="https://www.theglobeandmail.com/business/article-cohere-merger-germany-aleph-alpha-artificial-intelligence/" target="_blank" rel="noopener">The Globe and Mail</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-at">オーストリア</span>Vienna SOLARIS「AI:AT Coworking Hub」始動</h3>
+      <p>AI Factory Austria AI:ATがViennaのSOLARISでコワーキングハブを開設。約300名の産学官関係者が参加し、スタートアップ・研究機関・行政の共創拠点として位置付けられている。</p>
+      <p class="src">出典：<a href="https://ai-at.eu/en/news/ai-factory-austria-aiat-opens-aiat-coworking-hub/" target="_blank" rel="noopener">AI Factory Austria</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-at">オーストリア</span>Flinn.aiとNyra Healthが調達を牽引</h3>
+      <p>オーストリアのスタートアップ資金は2024年比で大幅縮小する中、Flinn.ai（EU向けMedTech規制AI、約3,100万ユーロ）とNyra Health（言語駆動型神経リハビリ、約3,350万ユーロ）がディープテック・プライバシーファーストの勝ち組として台頭。</p>
+      <p class="src">出典：<a href="https://www.eu-startups.com/2026/01/10-austrian-startups-to-keep-an-eye-on-in-2026-and-beyond/" target="_blank" rel="noopener">EU-Startups</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-jp">日本</span>国立情報学研究所、12兆トークン学習の国産LLMを公開</h3>
+      <p>NIIが日本語対応の大規模言語モデル2種をオープンソースで公開。約12兆トークンでの学習により一部ベンチマークでOpenAIモデルを上回る結果を示し、国産AI基盤の転換点となる発表となった。</p>
+      <p class="src">出典：<a href="https://gais.jp/news-2026-04-10/" target="_blank" rel="noopener">gais.jp 生成AI関連ニュース</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-jp">日本</span>医学書院・NTT・NTTドコモビジネス、純国産医療AIプラットフォームへ</h3>
+      <p>3社が医療AI情報プラットフォームの共同開発で合意。2026年度内の商用展開を目指し、将来的には300億円の売上を見込む。国内医療のAI基盤整備を加速する。</p>
+      <p class="src">出典：<a href="https://www.ntt.com/about-us/press-releases/news/article/2026/0416_2.html" target="_blank" rel="noopener">NTTドコモビジネス</a></p>
+    </article>
+
+    <article class="news-item">
+      <h3><span class="tag tag-jp">日本</span>AI博覧会 Spring 2026、4月7-8日に東京国際フォーラムで開催</h3>
+      <p>生成AI・マルチモーダル・RAG・外観検査など国内実装事例が集結。日本企業のAI活用フェーズが「導入」から「成果」に移行したことを象徴するイベントとなった。</p>
+      <p class="src">出典：<a href="https://bizfreak.co.jp/blog/t2l_q4q6wafh" target="_blank" rel="noopener">bizfreak</a></p>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 世界AIニュース速報 / 自動生成レポート（2026-04-17 JST）</p>
+  <p>本レポートは複数の公開ソースを参照し、Claudeが編集・要約しています。正確性については各出典リンクをご確認ください。</p>
+</footer>
+</body>
+</html>
