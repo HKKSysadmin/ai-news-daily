@@ -3,137 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>世界AIニュース速報 — アーカイブ</title>
+<title>世界AIニュースモニター | アーカイブ</title>
 <style>
-  :root {
-    --primary: #1a1a2e;
-    --accent: #0f3460;
-    --highlight: #e94560;
-    --bg: #f7f7fb;
-    --card: #ffffff;
-    --text: #1a1a2e;
-    --muted: #4b5563;
-    --border: #e4e7ef;
+  :root{
+    --primary:#1a1a2e;
+    --accent:#0f3460;
+    --highlight:#e94560;
+    --bg:#f4f5f9;
+    --card:#ffffff;
+    --text:#1f2333;
+    --muted:#5b6173;
+    --line:#e3e6ef;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.75;
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
   }
-  .container { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-  header.site-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: #fff;
-    padding: 56px 20px 48px;
-    text-align: center;
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header{
+    background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+    color:#fff;
+    padding:56px 24px;
+    text-align:center;
   }
-  header.site-header h1 { margin: 0; font-size: 36px; }
-  header.site-header p { margin: 14px 0 0 0; opacity: 0.88; font-size: 15px; }
-  main { padding: 40px 0 60px; }
-  .latest {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-left: 6px solid var(--highlight);
-    border-radius: 12px;
-    padding: 28px 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    margin-bottom: 40px;
+  header h1{font-size:2.4rem;letter-spacing:.04em;margin-bottom:12px;}
+  header .subtitle{font-size:1.05rem;opacity:.85;}
+  main{max-width:760px;margin:0 auto;padding:40px 20px 60px;}
+  .latest{
+    background:linear-gradient(135deg,#e94560,#b3273f);
+    color:#fff;
+    border-radius:14px;
+    padding:28px 26px;
+    margin-bottom:36px;
+    box-shadow:0 6px 18px rgba(233,69,96,.25);
   }
-  .latest .label {
-    display: inline-block;
-    background: var(--highlight);
-    color: #fff;
-    padding: 4px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+  .latest .label{
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.1em;
+    opacity:.9;
+    margin-bottom:8px;
   }
-  .latest h2 { margin: 14px 0 10px 0; font-size: 22px; color: var(--primary); }
-  .latest a.cta {
-    display: inline-block;
-    margin-top: 14px;
-    background: var(--accent);
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
+  .latest h2{font-size:1.5rem;margin-bottom:14px;}
+  .latest a{
+    display:inline-block;
+    background:#fff;
+    color:var(--highlight);
+    font-weight:700;
+    padding:10px 22px;
+    border-radius:24px;
+    margin-top:6px;
   }
-  .latest a.cta:hover { background: var(--highlight); }
-  h2.section-title {
-    font-size: 22px;
-    color: var(--primary);
-    border-left: 6px solid var(--highlight);
-    padding-left: 14px;
-    margin: 0 0 22px 0;
+  .latest a:hover{text-decoration:none;opacity:.9;}
+  .archive-title{
+    font-size:1.3rem;
+    color:var(--primary);
+    border-left:6px solid var(--highlight);
+    padding-left:14px;
+    margin-bottom:18px;
   }
-  .archive-list { list-style: none; padding: 0; margin: 0; }
-  .archive-list li {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    margin-bottom: 12px;
-    padding: 16px 22px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-    transition: transform 0.12s ease;
+  ul.archive{list-style:none;}
+  ul.archive li{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 20px;
+    margin-bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 1px 4px rgba(0,0,0,.05);
   }
-  .archive-list li:hover { transform: translateY(-2px); }
-  .archive-list a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
+  ul.archive li .date{font-weight:700;color:var(--primary);}
+  footer{
+    background:var(--primary);
+    color:#aeb4cc;
+    text-align:center;
+    padding:30px 20px;
+    font-size:.88rem;
   }
-  .archive-list a:hover { color: var(--highlight); }
-  .archive-list .date { color: var(--muted); font-size: 13px; margin-right: 10px; }
-  footer.site-footer {
-    background: var(--primary);
-    color: #d1d5db;
-    padding: 28px 20px;
-    text-align: center;
-    font-size: 13px;
-  }
+  footer .hl{color:var(--highlight);}
 </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container">
-    <h1>世界AIニュース速報</h1>
-    <p>米国・カナダ・EU・オーストラリア・オーストリア・日本 — 6地域のAI動向を毎朝8時（JST）にお届け</p>
-  </div>
+
+<header>
+  <h1>世界AIニュースモニター</h1>
+  <div class="subtitle">米国・日本・欧州・中国 — 世界6地域のAI動向を毎朝お届け</div>
 </header>
 
-<main class="container">
+<main>
   <div class="latest">
-    <span class="label">最新レポート</span>
-    <h2>2026年4月23日（木） — エージェンティックAIのインフラ化・Rubin量産・EU AI Act簡素化</h2>
-    <p>Anthropic Claude Opus 4.7、OpenAI DeployCo始動、Nebius×Meta 270億ドル契約、カナダAI Sovereign Compute、LINEヤフー「Agent i」など。</p>
-    <a class="cta" href="ai-news-2026-04-23.html">今日のレポートを読む →</a>
+    <div class="label">最新レポート</div>
+    <h2>2026年6月9日（火）版</h2>
+    <p>Anthropicが評価額世界首位に／EUがAI法を簡素化・延期／カナダ「AI for All」発表／JAL羽田で人型ロボット実証 ほか</p>
+    <a href="ai-news-2026-06-09.html">レポートを読む →</a>
   </div>
 
-  <section>
-    <h2 class="section-title">アーカイブ</h2>
-    <ul class="archive-list">
-      <li><span class="date">2026-04-23（木）</span><a href="ai-news-2026-04-23.html">Claude Opus 4.7、OpenAI DeployCo、カナダ主権AIコンピュート、LINEヤフーAgent i</a></li>
-      <li><span class="date">2026-04-18（土）</span><a href="ai-news-2026-04-18.html">NVIDIA Rubin発表、EU AI Actトリローグ、日本AI基盤モデル開発、カナダ主権AI、豪州プライバシー法改正</a></li>
-      <li><span class="date">2026-04-17（金）</span><a href="ai-news-2026-04-17.html">週末前のAIニュースまとめ</a></li>
-      <li><span class="date">2026-04-15（水）</span><a href="ai-news-2026-04-15.html">4月中旬のAI動向</a></li>
-      <li><span class="date">2026-04-14（火）</span><a href="ai-news-2026-04-14.html">4月14日のAIトピック</a></li>
-      <li><span class="date">2026-04-13（月）</span><a href="ai-news-2026-04-13.html">4月13日のAIトピック</a></li>
-    </ul>
-  </section>
+  <h2 class="archive-title">過去のレポート</h2>
+  <ul class="archive">
+    <li>
+      <span class="date">2026年6月9日（火）— 世界6地域AI動向</span>
+      <a href="ai-news-2026-06-09.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月23日（木）— Claude Opus 4.7・OpenAI DeployCo ほか</span>
+      <a href="ai-news-2026-04-23.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月18日（土）— NVIDIA Rubin・EU AI Act・日本基盤モデル</span>
+      <a href="ai-news-2026-04-18.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月17日（金）— 週末前のAIニュースまとめ</span>
+      <a href="ai-news-2026-04-17.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月15日（水）— 4月中旬のAI動向</span>
+      <a href="ai-news-2026-04-15.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月14日（火）— 4月14日のAIトピック</span>
+      <a href="ai-news-2026-04-14.html">開く →</a>
+    </li>
+    <li>
+      <span class="date">2026年4月13日（月）— 4月13日のAIトピック</span>
+      <a href="ai-news-2026-04-13.html">開く →</a>
+    </li>
+  </ul>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>世界AIニュース速報 — 毎朝8時（JST）自動配信</p>
-    <p>本サイトはAIが公開ニュースソースからキュレーション・分析したものです。正確性は各出典リンクでご確認ください。</p>
-    <p>© 2026 AI News Daily</p>
-  </div>
+<footer>
+  <p><span class="hl">世界AIニュースモニター</span> — 米国・カナダ・EU・オーストラリア・オーストリア・日本の6地域を毎朝自動収集</p>
+  <p>AI分析付きデイリーレポート ／ 自動生成</p>
 </footer>
+
 </body>
 </html>
