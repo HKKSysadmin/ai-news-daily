@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世界AIニュースモニター | 2026年6月9日</title>
+<style>
+  :root{
+    --primary:#1a1a2e;
+    --accent:#0f3460;
+    --highlight:#e94560;
+    --bg:#f4f5f9;
+    --card:#ffffff;
+    --text:#1f2333;
+    --muted:#5b6173;
+    --line:#e3e6ef;
+    --trend:#3a7bd5;
+    --tech:#16a085;
+    --biz:#e67e22;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  header{
+    background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+    color:#fff;
+    padding:48px 24px 40px;
+    text-align:center;
+  }
+  header h1{
+    font-size:2.4rem;
+    letter-spacing:.04em;
+    margin-bottom:10px;
+  }
+  header .subtitle{
+    font-size:1.05rem;
+    opacity:.85;
+    margin-bottom:20px;
+  }
+  .date-badge{
+    display:inline-block;
+    background:var(--highlight);
+    color:#fff;
+    font-weight:700;
+    padding:8px 20px;
+    border-radius:24px;
+    font-size:.95rem;
+  }
+  nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(26,26,46,.96);
+    backdrop-filter:blur(6px);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+    padding:12px 8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  nav a{
+    color:#dfe3f0;
+    font-size:.9rem;
+    padding:6px 14px;
+    border-radius:18px;
+    transition:background .2s;
+  }
+  nav a:hover{background:var(--highlight);color:#fff;text-decoration:none;}
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding:32px 20px 60px;
+  }
+  .section-title{
+    font-size:1.5rem;
+    color:var(--primary);
+    border-left:6px solid var(--highlight);
+    padding-left:14px;
+    margin:44px 0 22px;
+  }
+  .intro{
+    background:var(--card);
+    border-radius:12px;
+    padding:22px 24px;
+    margin-bottom:8px;
+    box-shadow:0 1px 4px rgba(0,0,0,.05);
+    color:var(--muted);
+  }
+  /* Analysis boxes */
+  .analysis{
+    border-radius:14px;
+    padding:24px 26px;
+    margin-bottom:20px;
+    color:#fff;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+  }
+  .analysis h3{
+    font-size:1.25rem;
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .analysis ol{padding-left:22px;}
+  .analysis li{margin-bottom:12px;}
+  .analysis li strong{color:#fff;}
+  .analysis-trend{background:linear-gradient(135deg,#3a7bd5,#2c3e91);}
+  .analysis-tech{background:linear-gradient(135deg,#16a085,#0e6e5c);}
+  .analysis-biz{background:linear-gradient(135deg,#e67e22,#c0562a);}
+  /* News cards */
+  .news-card{
+    background:var(--card);
+    border-radius:12px;
+    padding:20px 22px;
+    margin-bottom:16px;
+    box-shadow:0 1px 4px rgba(0,0,0,.06);
+    border:1px solid var(--line);
+    transition:transform .15s,box-shadow .15s;
+  }
+  .news-card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.1);}
+  .news-card h4{
+    font-size:1.1rem;
+    margin-bottom:8px;
+    color:var(--primary);
+  }
+  .news-card p{color:var(--muted);font-size:.97rem;margin-bottom:10px;}
+  .news-card .src{font-size:.85rem;}
+  /* Tags */
+  .tag{
+    display:inline-block;
+    font-size:.74rem;
+    font-weight:700;
+    color:#fff;
+    padding:3px 10px;
+    border-radius:12px;
+    margin-bottom:10px;
+    letter-spacing:.03em;
+  }
+  .tag-us{background:#2563eb;}
+  .tag-eu{background:#7c3aed;}
+  .tag-ca{background:#dc2626;}
+  .tag-au{background:#0891b2;}
+  .tag-at{background:#be185d;}
+  .tag-jp{background:#ea580c;}
+  .tag-global{background:#475569;}
+  footer{
+    background:var(--primary);
+    color:#aeb4cc;
+    text-align:center;
+    padding:30px 20px;
+    font-size:.88rem;
+  }
+  footer .hl{color:var(--highlight);}
+  @media(max-width:600px){
+    header h1{font-size:1.7rem;}
+    .section-title{font-size:1.25rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>世界AIニュースモニター</h1>
+  <div class="subtitle">米国・日本・欧州・中国 — 世界6地域のAI動向を毎朝お届け</div>
+  <span class="date-badge">2026年6月9日（火）版</span>
+</header>
+
+<nav>
+  <a href="#analysis">AI分析</a>
+  <a href="#models">モデル</a>
+  <a href="#corporate">企業動向</a>
+  <a href="#regulation">規制</a>
+  <a href="#robotics">ロボティクス</a>
+  <a href="#regional">地域別</a>
+</nav>
+
+<main>
+
+  <div class="intro">
+    本日は、Anthropicの評価額が96.5兆円規模に到達しOpenAIを抜いて世界最高額の未公開AI企業となった一方、米国の「Mythos」級モデルが既知脆弱性を数十分で兵器化できることが示され、サイバー防衛が新たな焦点に。欧州はAI法を簡素化し主要義務を最大16か月延期、カナダは総額23億ドル超の国家戦略「AI for All」を発表、日本では政府専用AI基盤「源内」やJAL羽田の人型ロボット実証が進展しています。世界6地域の主要トピックを分析付きでお届けします。
+  </div>
+
+  <!-- ANALYSIS -->
+  <h2 class="section-title" id="analysis">AI分析 &amp; 注目ポイント</h2>
+
+  <div class="analysis analysis-trend">
+    <h3>📈 トレンド分析 &amp; 注目ポイント</h3>
+    <ol>
+      <li><strong>「導入するか」から「どう安全に運用するか」へ。</strong>生成AIが業務インフラ化し、日本でも学習データ管理・著作権・社内ルールなど法務寄りの議論が主流に。世界的に論点が活用可否からガバナンスへ移行しています。</li>
+      <li><strong>規制は「緩和・延期」局面へ。</strong>EUはAI法の高リスク義務を2027年末まで延期、豪州は義務的ガードレールを撤回し既存法ベースへ。各国が「規制より普及」を競う構図が鮮明になっています。</li>
+      <li><strong>国家戦略の同時多発。</strong>カナダ「AI for All」、豪州「National AI Plan」、日本「人工知能基本計画」と、主要国が相次いで巨額の国家AI戦略を打ち出し、主権・人材・普及率を競争軸に据えています。</li>
+    </ol>
+  </div>
+
+  <div class="analysis analysis-tech">
+    <h3>🔬 技術深掘り分析</h3>
+    <ol>
+      <li><strong>攻防両面のサイバー能力が現実に。</strong>Anthropicの「Mythos」はWindowsカーネル脆弱性のPoCを31分で生成。既知の欠陥を数時間で兵器化でき、開示から修正までの「パッチギャップ」を一気に縮める脅威・防御の両刃となっています。</li>
+      <li><strong>フィジカルAIの本番投入。</strong>NVIDIA Isaac GR00Tの新オープンモデルが自然言語指示からの多段タスクを可能にし、BMWのFigure導入は配置精度99%超を達成。シミュレーション特化のEmmi AIなど、現実世界とAIの接続が加速しています。</li>
+      <li><strong>「速くて安い」モデルへの収束。</strong>Gemini 3.5 Flashはコーディング・エージェント性能で上位機を約4倍速で上回り、米国最大級のオープン重みモデルNemotron 3 Ultra（550B）も登場。高速・低コスト・オープン化が技術競争の主戦場です。</li>
+    </ol>
+  </div>
+
+  <div class="analysis analysis-biz">
+    <h3>💼 投資・ビジネス視点の分析</h3>
+    <ol>
+      <li><strong>資金は超大型に集中。</strong>Anthropicが650億ドルを調達し評価額9,650億ドルでOpenAIを上回り世界首位に。一方オーストリアの起業資金は2024年比約70%減と、ディープテック勝者への一極集中が進みます。</li>
+      <li><strong>人型ロボットが次の1兆ドル市場に。</strong>市場は現在の2〜3十億ドルから2035年に2,000億ドル規模へ拡大予測。Tesla（フリーモント転換）、Schaeffler、BMW、JAL、Amazonなど大手が実装フェーズへ移行しています。</li>
+      <li><strong>収益モデルの転換期。</strong>GitHub Copilotが定額からトークン課金へ移行し開発者の反発を招くなど、AIサービスの料金体系が再設計局面に。利用量ベースへの移行はコスト管理の新たな論点となります。</li>
+    </ol>
+  </div>
+
+  <!-- MODELS -->
+  <h2 class="section-title" id="models">最新モデル動向</h2>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>Google、Gemini 3.5 Flashを正式提供開始 — 上位機を約4倍速で凌駕</h4>
+    <p>Google I/O 2026で5月19日にGA。API価格は100万トークンあたり1.50ドル／9.00ドルで、コーディング・エージェント系ベンチマークでGemini 3.1 Proを約4倍の速度で上回ると発表。後継のGemini 3.5 Proは6月中の投入が示唆されています。</p>
+    <div class="src">出典: <a href="https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/" target="_blank">WaveSpeed Blog</a> / <a href="https://fortune.com/2026/05/20/google-i-o-2026/" target="_blank">Fortune</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>NVIDIA、Nemotron 3 Ultra（550B）を公開 — 米国最大級のオープン重みモデル</h4>
+    <p>総パラメータ550B（アクティブ55B）でNemotron 3シリーズ最大。米国で最も高性能なオープン重みモデルとされ、オープン化と高性能化を両立する潮流を象徴しています。</p>
+    <div class="src">出典: <a href="https://radicaldatascience.wordpress.com/2026/06/04/ai-news-briefs-bulletin-board-for-june-2026/" target="_blank">Radical Data Science</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>ChatGPT、月間アクティブユーザー10億人を突破</h4>
+    <p>AIアシスタントの世界的な普及を象徴する節目に到達。生成AIが一般消費者の日常ツールとして定着しつつあることを示しています。</p>
+    <div class="src">出典: <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026" target="_blank">Build Fast with AI</a></div>
+  </div>
+
+  <!-- CORPORATE -->
+  <h2 class="section-title" id="corporate">企業動向</h2>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>Anthropic、650億ドルを調達し評価額9,650億ドル — OpenAIを抜き世界首位の未公開AI企業に</h4>
+    <p>ポストマネー評価額9,650億ドルで、OpenAIの8,520億ドルを初めて上回り、世界で最も価値ある未公開AI企業となりました。AI領域への資金集中の象徴的な案件です。</p>
+    <div class="src">出典: <a href="https://radicaldatascience.wordpress.com/2026/06/04/ai-news-briefs-bulletin-board-for-june-2026/" target="_blank">Radical Data Science</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>Google、I/Oで「AIをあらゆる場所へ」戦略を提示</h4>
+    <p>新モデルや刷新された検索バー、AIグラス、YouTubeでの対話型検索まで、製品全体にAIを深く組み込む計画を開発者会議で披露しました。</p>
+    <div class="src">出典: <a href="https://www.axios.com/2026/05/19/google-ai-youtube-gemini" target="_blank">Axios</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-global">グローバル</span>
+    <h4>GitHub Copilot、定額制からトークン課金へ移行 — 開発者から反発</h4>
+    <p>全プランで利用量ベースの課金へ切り替え。AIサービスの収益モデル転換を示す一方、コスト予見性の低下を懸念する声が上がっています。</p>
+    <div class="src">出典: <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-1-2026" target="_blank">Build Fast with AI</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>Meta、ウェアラブルAI戦略を拡大 — AIペンダントや「Wearables for Work」を準備</h4>
+    <p>AIグラスのラインアップ拡充に加え、AI搭載ペンダントや業務向けウェアラブルを検証中。デバイス側でのAI体験拡張を狙います。</p>
+    <div class="src">出典: <a href="https://www.youtube.com/watch?v=sk1hx3poZGw" target="_blank">AI News (YouTube)</a></div>
+  </div>
+
+  <!-- REGULATION -->
+  <h2 class="section-title" id="regulation">規制・政策</h2>
+
+  <div class="news-card">
+    <span class="tag tag-eu">EU</span>
+    <h4>EU、AI法を簡素化 — 高リスク義務を最大16か月延期、新たな禁止項目も</h4>
+    <p>5月7日に「デジタル・オムニバス」で暫定合意。附属書III高リスク義務は2026年8月から2027年12月へ延期。非同意の性的合成コンテンツやCSAMの生成・操作を新たに禁止し、高リスクの定義も健康・安全に直結するものへ絞り込みました。正式採択は2026年7月までの見込みです。</p>
+    <div class="src">出典: <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/" target="_blank">欧州理事会</a> / <a href="https://www.euronews.com/my-europe/2026/05/21/the-eu-simplified-its-toughest-ai-law-what-changed-and-why-it-matters" target="_blank">Euronews</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>トランプ大統領、AIとサイバーセキュリティに関する大統領令に署名</h4>
+    <p>連邦機関のサイバー防衛強化と、先進AIモデルのサイバー能力を評価するベンチマーク手続きの整備を指示。ただしAI企業に最新モデルの情報共有を強制するものではありません。</p>
+    <div class="src">出典: <a href="https://www.axios.com/2026/06/02/trump-signs-new-ai-executive-order" target="_blank">Axios</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-au">オーストラリア</span>
+    <h4>豪州、義務的AI規制を撤回し「普及優先」へ — AI安全研究所を新設</h4>
+    <p>National AI Planで高リスク分野の義務的ガードレールを見送り、既存法を基盤とする方針へ転換。約2,990万豪ドルでAI安全研究所を設立しますが、執行権限を持つ規制機関ではありません。2026年12月からはプライバシー法改正で自動意思決定への新義務が発生します。</p>
+    <div class="src">出典: <a href="https://iapp.org/news/a/australia-unveils-ai-policy-roadmap" target="_blank">IAPP</a> / <a href="https://www.whitecase.com/insight-alert/australias-national-ai-plan-big-ambitions-light-details" target="_blank">White &amp; Case</a></div>
+  </div>
+
+  <!-- ROBOTICS -->
+  <h2 class="section-title" id="robotics">ロボティクス・フィジカルAI</h2>
+
+  <div class="news-card">
+    <span class="tag tag-jp">日本</span>
+    <h4>JAL、羽田空港で日本初の人型ロボット実証 — 地上業務に投入</h4>
+    <p>2026年5月、Unitree Roboticsベースの人型プラットフォームを羽田空港に配備。手荷物搭降載やコンテナ搬送、機内清掃などの地上ハンドリング業務を対象とした日本初の実証を開始しました。</p>
+    <div class="src">出典: <a href="https://memeburn.com/physical-ai-is-sending-humanoid-robots-to-real-factory-floors-in-2026/" target="_blank">Memeburn</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>BMW、Figure AIの人型ロボットを生産ラインで稼働 — 配置精度99%超</h4>
+    <p>Figure AIのパイロットがBMW X3を3万台以上で支援し、99%超の配置精度を達成。NVIDIA Isaac GR00Tの新オープンモデルは自然言語指示からの多段タスク実行を可能にしています。</p>
+    <div class="src">出典: <a href="https://blogs.nvidia.com/blog/national-robotics-week-2026/" target="_blank">NVIDIA Blog</a> / <a href="https://memeburn.com/physical-ai-is-sending-humanoid-robots-to-real-factory-floors-in-2026/" target="_blank">Memeburn</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-global">グローバル</span>
+    <h4>人型ロボットが次の1兆ドル市場へ — Tesla・Schaefflerが量産フェーズ</h4>
+    <p>市場は現在の2〜3十億ドルから2035年に2,000億ドル規模へ拡大予測。英Humanoid社はSchaefflerと2032年までに最大2,000台の配備で合意、Teslaはフリーモント工場を人型ロボット生産へ転換する計画を表明しました。</p>
+    <div class="src">出典: <a href="https://www.cnbc.com/2026/06/03/humanoid-robots-trillion-dollar-ai-market.html" target="_blank">CNBC</a> / <a href="https://kraneshares.com/humanoid-robotics-in-2026-the-race-from-pilot-to-platform/" target="_blank">KraneShares</a></div>
+  </div>
+
+  <!-- REGIONAL -->
+  <h2 class="section-title" id="regional">地域別フォーカス</h2>
+
+  <div class="news-card">
+    <span class="tag tag-ca">カナダ</span>
+    <h4>カーニー首相、国家AI戦略「AI for All」を発表 — 23億ドル超を投資</h4>
+    <p>5年間で2,000億ドルの経済成長と25万人の新規雇用を目標に、23億ドル超の新規支出を計上。中小企業の導入支援に5億ドル、有望スタートアップ向けファンドに5億ドルなどを配分。一方、AIに「ワクワクする」と答えた国民は26%に低下し、67%が不安を表明する信頼ギャップも課題です。</p>
+    <div class="src">出典: <a href="https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial" target="_blank">カナダ首相府</a> / <a href="https://www.cbc.ca/news/politics/carney-ai-strategy-9.7223236" target="_blank">CBC News</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-jp">日本</span>
+    <h4>政府専用AI基盤「源内」、2026年度に約18万人規模の大規模実証へ</h4>
+    <p>政府は2025年12月に「人工知能基本計画」を閣議決定。デジタル庁は行政実務効率化を目的とした政府専用AI基盤「源内」を構築し、全府省庁39機関・約18万人規模での実証を2026年度に開始予定です。</p>
+    <div class="src">出典: <a href="https://gen-ai-media.guga.or.jp/knowledge/knowledge-6993/" target="_blank">Generative AI Media</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-jp">日本</span>
+    <h4>NTTデータ経営研究所、金融機関向けAI導入コンサルを開始</h4>
+    <p>2026年5月7日より、金融規制対応とAIガバナンスに精通したコンサルタントが設計する全18サービスを提供開始。生成AIの「業務インフラ化」を背景に、安全な運用設計の需要が高まっています。</p>
+    <div class="src">出典: <a href="https://www.nttdata-strategy.com/newsrelease/260507/" target="_blank">NTTデータ経営研究所</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-at">オーストリア</span>
+    <h4>オーストリアのディープテックAIが台頭 — Emmi AIが1,500万ユーロ調達</h4>
+    <p>リンツ拠点のEmmi AIはAIで工学シミュレーションを高速化し、自動車・航空宇宙・エネルギー向けに展開、1,500万ユーロを調達。ウィーンのChatlyn（ホスピタリティ向け対話基盤）やFlinn（医療機器の規制業務自動化）も注目。国内起業資金が2024年比約70%減少する中、ディープテック勝者へ資本が集中しています。</p>
+    <div class="src">出典: <a href="https://www.eu-startups.com/2026/01/10-austrian-startups-to-keep-an-eye-on-in-2026-and-beyond/" target="_blank">EU-Startups</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="tag tag-us">米国</span>
+    <h4>Anthropic、「Mythos」が新たな脆弱性を数時間で悪用と警告</h4>
+    <p>先進モデルが既知の欠陥を急速に兵器化でき、開示から修正までの「パッチギャップ」を大幅に縮める恐れ。MythosはWindowsカーネル脆弱性のPoCを31分で生成したとされ、サイバー防衛の新たな焦点となっています。</p>
+    <div class="src">出典: <a href="https://www.axios.com/2026/06/08/exclusive-anthropics-mythos-can-exploit-new-flaws-in-hours" target="_blank">Axios</a></div>
+  </div>
+
+</main>
+
+<footer>
+  <p><span class="hl">世界AIニュースモニター</span> — 米国・カナダ・EU・オーストラリア・オーストリア・日本の6地域を毎朝自動収集</p>
+  <p>2026年6月9日（火）自動生成 ／ AI分析付きデイリーレポート</p>
+</footer>
+
+</body>
+</html>
